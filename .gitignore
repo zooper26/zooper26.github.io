@@ -1,0 +1,8 @@
+# Hugo build artifacts
+hugo
+hugo_extended_*.tar.gz
+LICENSE
+
+# Temporary files
+.DS_Store
+Thumbs.db

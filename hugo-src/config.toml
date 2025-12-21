@@ -1,0 +1,13 @@
+baseURL = "https://triadsystems.tech/"
+languageCode = "en-us"
+title = "Triad Systems"
+
+# Build settings for GitHub Pages
+publishDir = "../"
+
+# Disable taxonomies and RSS we don't need
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Professional landing page"
+  author = "Triad Systems"
