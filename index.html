@@ -3,49 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Pages Site</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <title>Secure Editor - Triad Systems</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #333;
         }
-        h1 {
-            color: #0969da;
-            border-bottom: 3px solid #0969da;
-            padding-bottom: 10px;
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 90%;
+            max-width: 800px;
         }
-        .info-box {
-            background-color: #f6f8fa;
-            border-left: 4px solid #0969da;
+
+        .header {
+            background: #667eea;
+            color: white;
             padding: 20px;
-            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        code {
-            background-color: #f6f8fa;
-            padding: 2px 6px;
-            border-radius: 3px;
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .header .ssl-badge {
+            background: #10b981;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header .ssl-badge::before {
+            content: "🔒";
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .login-form, .editor-panel {
+            display: none;
+        }
+
+        .login-form.active, .editor-panel.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .info-box {
+            background: #f3f4f6;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .editor-header h2 {
+            color: #374151;
+            font-size: 20px;
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .editor-actions button {
+            width: auto;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 300px;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .user-info {
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-info span {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .lock-icon {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is a placeholder page for <strong>zooper26.github.io</strong></p>
-    
-    <div class="info-box">
-        <h2>Custom Domain Ready</h2>
-        <p>This site is configured to support custom domains. To add your custom domain:</p>
-        <ol>
-            <li>Go to your repository Settings > Pages</li>
-            <li>Enter your custom domain in the "Custom domain" field</li>
-            <li>Configure your DNS records with your domain provider</li>
-        </ol>
+    <div class="container">
+        <div class="header">
+            <h1>Secure Editor</h1>
+            <div class="ssl-badge">SSL Secured</div>
+        </div>
+        
+        <div class="content">
+            <!-- Login Form -->
+            <div class="login-form active" id="loginForm">
+                <div class="lock-icon">🔐</div>
+                <h2 style="text-align: center; margin-bottom: 10px; color: #374151;">Welcome Back</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: #6b7280;">Please login to access the editor</p>
+                
+                <div class="info-box">
+                    <strong>Demo Credentials:</strong><br>
+                    Username: <code>admin</code><br>
+                    Password: <code>demo123</code>
+                </div>
+                
+                <div class="error-message" id="loginError"></div>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                    </div>
+                    
+                    <button type="submit" class="btn">Login Securely</button>
+                </form>
+                
+                <div class="info-box" style="margin-top: 20px;">
+                    <strong>🔒 Security Features:</strong><br>
+                    • SSL/TLS encryption enabled<br>
+                    • Content Security Policy headers<br>
+                    • XSS protection enabled<br>
+                    • Secure session management
+                </div>
+            </div>
+            
+            <!-- Editor Panel -->
+            <div class="editor-panel" id="editorPanel">
+                <div class="user-info">
+                    <span>👤 Logged in as: <span id="currentUser"></span></span>
+                </div>
+                
+                <div class="success-message" id="saveSuccess"></div>
+                
+                <div class="editor-header">
+                    <h2>Content Editor</h2>
+                    <div class="editor-actions">
+                        <button class="btn" onclick="saveContent()">💾 Save</button>
+                        <button class="btn btn-secondary" onclick="handleLogout()">🚪 Logout</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contentEditor">Edit your content below:</label>
+                    <textarea id="contentEditor" placeholder="Start typing your content here..."></textarea>
+                </div>
+                
+                <div class="info-box">
+                    <strong>ℹ️ Editor Tips:</strong><br>
+                    • Content is automatically saved to browser localStorage<br>
+                    • All changes are preserved between sessions<br>
+                    • Use the Save button to store your work
+                </div>
+            </div>
+        </div>
     </div>
     
-    <h2>Getting Started</h2>
-    <p>Edit <code>index.html</code> to customize this page, or replace it with your own content.</p>
+    <script>
+        // Security: Sanitize HTML to prevent XSS
+        function sanitizeHTML(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+        
+        // Check if user is already logged in
+        function checkAuth() {
+            const session = localStorage.getItem('editorSession');
+            if (session) {
+                try {
+                    const sessionData = JSON.parse(session);
+                    const now = new Date().getTime();
+                    
+                    // Check if session is still valid (24 hours)
+                    if (sessionData.expiry && sessionData.expiry > now) {
+                        showEditor(sessionData.username);
+                        return;
+                    }
+                } catch (e) {
+                    console.error('Invalid session data');
+                }
+            }
+            showLogin();
+        }
+        
+        // Handle login
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            
+            // Basic validation (in production, this would be server-side)
+            if (username === 'admin' && password === 'demo123') {
+                // Create session
+                const expiry = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours
+                const sessionData = {
+                    username: sanitizeHTML(username),
+                    expiry: expiry,
+                    loginTime: new Date().toISOString()
+                };
+                
+                localStorage.setItem('editorSession', JSON.stringify(sessionData));
+                showEditor(username);
+            } else {
+                errorDiv.textContent = '❌ Invalid credentials. Please try again.';
+                errorDiv.classList.add('active');
+                
+                // Clear error after 5 seconds
+                setTimeout(() => {
+                    errorDiv.classList.remove('active');
+                }, 5000);
+            }
+        }
+        
+        // Show editor
+        function showEditor(username) {
+            document.getElementById('loginForm').classList.remove('active');
+            document.getElementById('editorPanel').classList.add('active');
+            document.getElementById('currentUser').textContent = sanitizeHTML(username);
+            
+            // Load saved content
+            const savedContent = localStorage.getItem('editorContent');
+            if (savedContent) {
+                document.getElementById('contentEditor').value = savedContent;
+            }
+        }
+        
+        // Show login
+        function showLogin() {
+            document.getElementById('editorPanel').classList.remove('active');
+            document.getElementById('loginForm').classList.add('active');
+        }
+        
+        // Handle logout
+        function handleLogout() {
+            if (confirm('Are you sure you want to logout?')) {
+                localStorage.removeItem('editorSession');
+                showLogin();
+                
+                // Clear form
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            }
+        }
+        
+        // Save content
+        function saveContent() {
+            const content = document.getElementById('contentEditor').value;
+            localStorage.setItem('editorContent', content);
+            
+            const successDiv = document.getElementById('saveSuccess');
+            successDiv.textContent = '✅ Content saved successfully!';
+            successDiv.classList.add('active');
+            
+            // Clear success message after 3 seconds
+            setTimeout(() => {
+                successDiv.classList.remove('active');
+            }, 3000);
+        }
+        
+        // Auto-save on change (debounced)
+        let autoSaveTimer;
+        document.addEventListener('DOMContentLoaded', function() {
+            const editor = document.getElementById('contentEditor');
+            if (editor) {
+                editor.addEventListener('input', function() {
+                    clearTimeout(autoSaveTimer);
+                    autoSaveTimer = setTimeout(() => {
+                        localStorage.setItem('editorContent', editor.value);
+                    }, 1000);
+                });
+            }
+        });
+        
+        // Initialize on page load
+        checkAuth();
+        
+        // Force HTTPS redirect (if not already on HTTPS)
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
 </body>
 </html>
