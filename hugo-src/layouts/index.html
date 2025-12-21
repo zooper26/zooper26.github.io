@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
 <head>
-	<meta name="generator" content="Hugo 0.121.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
-    <meta name="description" content="Professional landing page">
-    <title>Welcome to Triad Systems | Triad Systems</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
     <style>
         * {
             margin: 0;
@@ -233,8 +232,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Triad Systems</h1>
-            <p>Professional landing page</p>
+            <h1>{{ .Site.Title }}</h1>
+            <p>{{ .Site.Params.description }}</p>
         </header>
 
         <nav>
@@ -250,42 +249,11 @@
                 <strong>📝 Easy Editing:</strong> All content is written in Markdown! Edit <code>hugo-src/content/_index.md</code> to update this page.
             </div>
 
-            <h1 id="welcome-to-triad-systems">Welcome to Triad Systems</h1>
-<p>A professional landing page built with Hugo - <strong>edit content using simple Markdown!</strong></p>
-<h2 id="about-us">About Us</h2>
-<p>This is a modern, secure static site built with Hugo. You can edit all content by simply modifying Markdown files - no HTML knowledge required!</p>
-<h2 id="features">Features</h2>
-<ul>
-<li>✨ <strong>Easy Editing</strong>: Update content using simple Markdown syntax</li>
-<li>🔒 <strong>Secure</strong>: Static site generation means no server-side vulnerabilities</li>
-<li>⚡ <strong>Fast</strong>: Lightning-fast page loads with static HTML</li>
-<li>📱 <strong>Responsive</strong>: Works perfectly on all devices</li>
-<li>🎨 <strong>Customizable</strong>: Easy to modify design and content</li>
-</ul>
-<h2 id="how-to-update-content">How to Update Content</h2>
-<ol>
-<li>Edit the <code>hugo-src/content/_index.md</code> file using Markdown</li>
-<li>Run <code>./hugo -s hugo-src</code> to rebuild the site</li>
-<li>Commit and push your changes</li>
-</ol>
-<h3 id="markdown-formatting-examples">Markdown Formatting Examples</h3>
-<p>You can use <strong>bold text</strong>, <em>italic text</em>, and <code>code snippets</code>.</p>
-<p>Create lists:</p>
-<ul>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ul>
-<p>Add links: <a href="https://gohugo.io/documentation/">Visit Hugo Docs</a></p>
-<h2 id="get-started">Get Started</h2>
-<p>Ready to customize? Just edit the Markdown files in the <code>hugo-src/content/</code> directory!</p>
-<hr>
-<p><em>Built with ❤️ using Hugo Static Site Generator</em></p>
-
+            {{ .Content }}
         </div>
 
         <footer>
-            <p>&copy; 2025 Triad Systems. All rights reserved.</p>
+            <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
             <p>Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> - A fast & secure static site generator</p>
         </footer>
     </div>
