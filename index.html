@@ -1,332 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta name="generator" content="Hugo 0.121.1">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
-    <meta name="description" content="Empowering innovation through artificial intelligence. AI solutions for the modern enterprise.">
-    <title>Intelligent Solutions for Tomorrow | Triad Systems</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+	<meta name="generator" content="Hugo 0.145.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8">
+<title>Triad Systems</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/favicon-64x64.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Triad Systems" />
+<link rel="manifest" href="/site.webmanifest" />
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.7;
-            color: #1a202c;
-            background: #0f172a;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #1e293b 0%, #0f172a 100%);
-            min-height: 100vh;
-            box-shadow: 0 0 60px rgba(59, 130, 246, 0.1);
-        }
+<link href='/css/bootstrap-icons.min.css' rel="stylesheet" type="text/css">
 
-        header {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-            color: white;
-            padding: 100px 40px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
-        }
+  
+  
+    
+      <link rel="stylesheet" href="/css/style.css">
+    
+  
 
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
 
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-        }
+<link rel="stylesheet" href='/css/splide.min.css'>
 
-        header p {
-            font-size: 1.4em;
-            opacity: 0.95;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-        }
 
-        nav {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-        }
+<link rel="stylesheet" href='/css/custom.css'>
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    <meta name="description" content="Empowering innovation through artificial intelligence. AI solutions for the modern enterprise." />
+    <meta property="og:title" content="Triad Systems" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://triadsystems.tech/" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Empowering innovation through artificial intelligence. AI solutions for the modern enterprise." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
 
-        nav li {
-            margin: 0;
-        }
-
-        nav a {
-            display: block;
-            padding: 18px 30px;
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            letter-spacing: 0.025em;
-        }
-
-        nav a:hover {
-            background: rgba(59, 130, 246, 0.1);
-            color: #3b82f6;
-        }
-
-        .content {
-            padding: 60px 50px;
-        }
-
-        .content h1 {
-            color: #f1f5f9;
-            font-size: 2.8em;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #3b82f6;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .content h2 {
-            color: #e2e8f0;
-            font-size: 2.2em;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .content h3 {
-            color: #cbd5e1;
-            font-size: 1.6em;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .content p {
-            margin-bottom: 18px;
-            font-size: 1.15em;
-            color: #94a3b8;
-            line-height: 1.8;
-        }
-
-        .content ul, .content ol {
-            margin: 25px 0 25px 30px;
-            font-size: 1.15em;
-        }
-
-        .content li {
-            margin-bottom: 14px;
-            color: #94a3b8;
-        }
-
-        .content a {
-            color: #60a5fa;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .content a:hover {
-            border-bottom-color: #60a5fa;
-            color: #93c5fd;
-        }
-
-        .content code {
-            background: rgba(59, 130, 246, 0.1);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-            font-size: 0.92em;
-            color: #60a5fa;
-        }
-
-        .content pre {
-            background: #0f172a;
-            color: #cbd5e1;
-            padding: 25px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 25px 0;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .content pre code {
-            background: none;
-            color: inherit;
-            padding: 0;
-        }
-
-        .content blockquote {
-            border-left: 4px solid #3b82f6;
-            padding-left: 25px;
-            margin: 25px 0;
-            font-style: italic;
-            color: #94a3b8;
-        }
-
-        .content hr {
-            border: none;
-            border-top: 2px solid rgba(59, 130, 246, 0.2);
-            margin: 50px 0;
-        }
-
-        .content strong {
-            color: #f1f5f9;
-            font-weight: 600;
-        }
-
-        .content em {
-            color: #cbd5e1;
-        }
-
-        footer {
-            background: linear-gradient(to top, #0f172a 0%, #1e293b 100%);
-            color: #cbd5e1;
-            text-align: center;
-            padding: 50px 40px;
-            margin-top: 80px;
-            border-top: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        footer p {
-            margin: 8px 0;
-            opacity: 0.9;
-            font-size: 1.05em;
-        }
-
-        footer a {
-            color: #60a5fa;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #93c5fd;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 60px 30px 50px;
-            }
-
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .content {
-                padding: 40px 25px;
-            }
-
-            .content h1 {
-                font-size: 2em;
-            }
-
-            .content h2 {
-                font-size: 1.7em;
-            }
-
-            .content h3 {
-                font-size: 1.3em;
-            }
-        }
-    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Triad Systems</h1>
-            <p>Empowering innovation through artificial intelligence. AI solutions for the modern enterprise.</p>
-        </header>
 
-        <nav>
-            <ul>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="#our-solutions">Solutions</a></li>
-                <li><a href="#why-choose-triad-systems">Why Us</a></li>
-                <li><a href="#get-started-today">Contact</a></li>
-            </ul>
-        </nav>
-
-        <div class="content">
-            <h1 id="empowering-innovation-through-artificial-intelligence">Empowering Innovation Through Artificial Intelligence</h1>
-<p>Transform your business with cutting-edge AI solutions designed for the future.</p>
-<h2 id="about-us">About Us</h2>
-<p>Triad Systems is at the forefront of artificial intelligence innovation, delivering transformative solutions that empower businesses to thrive in an increasingly digital world. Our team of expert engineers and data scientists leverages state-of-the-art machine learning technologies to solve complex challenges and unlock new opportunities for growth.</p>
-<p>We believe in the power of AI to revolutionize industries, streamline operations, and create meaningful value. From intelligent automation to advanced analytics, we partner with forward-thinking organizations to build the intelligent systems of tomorrow.</p>
-<h2 id="our-solutions">Our Solutions</h2>
-<h3 id="-ai-powered-automation">🤖 AI-Powered Automation</h3>
-<p>Streamline your workflows with intelligent automation that learns and adapts. Reduce operational costs while increasing efficiency and accuracy across your organization.</p>
-<h3 id="-advanced-data-analytics">📊 Advanced Data Analytics</h3>
-<p>Transform raw data into actionable insights with our sophisticated analytics platform. Make data-driven decisions with confidence using real-time intelligence and predictive modeling.</p>
-<h3 id="-machine-learning-solutions">🧠 Machine Learning Solutions</h3>
-<p>Custom machine learning models tailored to your specific business needs. From natural language processing to computer vision, we deliver solutions that drive tangible results.</p>
-<h3 id="-enterprise-ai-infrastructure">🔒 Enterprise AI Infrastructure</h3>
-<p>Secure, scalable AI infrastructure built for enterprise deployment. Our solutions integrate seamlessly with your existing systems while maintaining the highest security standards.</p>
-<h2 id="why-choose-triad-systems">Why Choose Triad Systems</h2>
-<ul>
-<li><strong>🎯 Expert Team</strong>: Industry-leading AI engineers and data scientists</li>
-<li><strong>⚡ Cutting-Edge Technology</strong>: Latest advancements in machine learning and AI</li>
-<li><strong>🛡️ Enterprise Security</strong>: Bank-level security and compliance standards</li>
-<li><strong>📈 Proven Results</strong>: Track record of successful AI implementations</li>
-<li><strong>🤝 Strategic Partnership</strong>: We work alongside you to ensure long-term success</li>
-</ul>
-<h2 id="get-started-today">Get Started Today</h2>
-<p>Ready to harness the power of artificial intelligence for your business? Contact us to discuss how Triad Systems can help you achieve your goals.</p>
-<hr>
-<p><em>Innovating at the intersection of AI and business</em></p>
-
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Triad Systems. All rights reserved.</p>
-            <p>Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> - A fast & secure static site generator</p>
-        </footer>
+<body class="flex flex-col min-h-screen">
+  <main class="grow"><header>
+    <div id="overlay" class="fixed inset-0 bg-black/90 backdrop-blur-md flex justify-center items-center z-50 transition-opacity duration-300 opacity-0 pointer-events-none" aria-hidden="true">
+        <ul class="text-center list-none text-white space-y-6">
+            
+            <li class="p-2 transform transition-transform hover:scale-110">
+                <a href="/solutions/" class="text-4xl font-semibold hover:text-gray-300 transition-colors">
+                    <span>Solutions</span>
+                </a>
+            </li>
+            
+            <li class="p-2 transform transition-transform hover:scale-110">
+                <a href="/blog/" class="text-4xl font-semibold hover:text-gray-300 transition-colors">
+                    <span>Blog</span>
+                </a>
+            </li>
+            
+            <li class="p-2 transform transition-transform hover:scale-110">
+                <a href="/about/" class="text-4xl font-semibold hover:text-gray-300 transition-colors">
+                    <span>About</span>
+                </a>
+            </li>
+            
+            <li class="p-2 transform transition-transform hover:scale-110">
+                <a href="/contact/" class="text-4xl font-semibold hover:text-gray-300 transition-colors">
+                    <span>Contact</span>
+                </a>
+            </li>
+            
+        </ul>
     </div>
+    <nav class="flex items-center justify-between flex-wrap bg-opacity-100 p-8">
+        <div class="flex items-center shrink-0 text-xl text-grey-900 mr-6">
+            <a href="http://localhost:8080/"><img alt="Triad Systems Logo"
+                    class="h-14 mr-3" src="/img/logo/logo.svg"></a>
+        </div>
+        <div class="block lg:hidden">
+            <div id="hamburgerbtn" class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
+        <div class="hidden w-full grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
+            <div class="text-lg lg:grow">
+            </div>
+            <div class="text-lg">
+                
+                <a href="/solutions/"
+                    class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8">
+                    Solutions
+                </a>
+                
+                <a href="/blog/"
+                    class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8">
+                    Blog
+                </a>
+                
+                <a href="/about/"
+                    class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8">
+                    About
+                </a>
+                
+                <a href="/contact/"
+                    class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8">
+                    Contact
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="scroll-top rounded-full flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+      </svg>
+    </div>
+<div class="splide" role="group" aria-label="Top Page Slides">
+    <div class="splide__track">
+        <ul class="splide__list">
+            
+            <li class="splide__slide">
+                <img src="img/slide/ai-innovation.jpg" alt="">
+                <div class="s-fade-txt">
+                    <h1 class="text-4xl font-medium text-white">Empowering Innovation Through Artificial Intelligence</h1>
+                </div>
+            </li>
+            
+            <li class="splide__slide">
+                <img src="img/slide/ai-business.jpg" alt="">
+                <div class="s-fade-txt">
+                    <h1 class="text-4xl font-medium text-white">Transform Your Business with AI Solutions</h1>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<div class="bg-tlgray-200 py-6 md:py-10">
+    <div class="container mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-robot text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">AI-Powered Automation</h2>
+                        <p class="font-sans">Streamline your workflows with intelligent automation that learns and adapts to your business needs.</p>
+                    </div>
+                </div>
+                
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-graph-up-arrow text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">Advanced Analytics</h2>
+                        <p class="font-sans">Transform raw data into actionable insights with sophisticated analytics and predictive modeling.</p>
+                    </div>
+                </div>
+                
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-shield-check text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">Enterprise Security</h2>
+                        <p class="font-sans">Bank-level security and compliance standards to protect your data and maintain trust.</p>
+                    </div>
+                </div>
+                
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-cpu text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">Machine Learning</h2>
+                        <p class="font-sans">Custom ML models tailored to your specific business needs, from NLP to computer vision.</p>
+                    </div>
+                </div>
+                
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-diagram-3 text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">Scalable Infrastructure</h2>
+                        <p class="font-sans">Enterprise-grade AI infrastructure that grows with your business requirements.</p>
+                    </div>
+                </div>
+                
+            
+            
+                <div
+                    class="bg-white text-center mx-2 px-4 py-10 flex flex-row justify-center items-center duration-300 h-full hover:-translate-y-1 hover:shadow-lg">
+                    <div class="p-1">
+                        
+                        <span class="bi bi-people text-5xl mb-2 block"></span>
+                        
+                        <h2 class="text-2xl font-semibold mb-2">Expert Support</h2>
+                        <p class="font-sans">Industry-leading AI engineers and data scientists working alongside you for success.</p>
+                    </div>
+                </div>
+                
+            
+        </div>
+    </div>
+</div>
+
+
+    <div class="mx-auto my-10 max-w-6xl px-4">
+        <h2 class="text-4xl mb-6 font-bold">Blog</h2>
+<a href="http://localhost:8080/blog/ai-trends-2025/"><div class="w-full px-2 lg:max-w-full lg:flex mt-3 lg:px-0 duration-500 hover:-translate-y-1 hover:shadow-md">
+  
+  <img id="thumb" alt="The Future of AI in Enterprise: Trends to Watch in 2025" class="aspect-video object-cover w-auto lg:h-44"
+    src='/img/default.jpg'>
+  
+  <div
+    class="border-r border-b border-l border-neutral-300 lg:border-l-0 lg:border-t relative pl-4 p-6 justify-between leading-normal max-w-full w-full">
+    <div class="text-gray-900 font-semibold text-xl mb-2">The Future of AI in Enterprise: Trends to Watch in 2025</div>
+    <p class="text-gray-700 text-base pb-5">The Future of AI in Enterprise: Trends to Watch in 2025 As...</p>
+    <p class="text-sm text-gray-600 flex flex-row items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+      </svg><time>2024/12/15</time>
+    </p>
+  </div>
+</div>
+</a>
+
+
+<div class="flex flex-wrap justify-center text-gray-300 my-5">
+    <a href="blog/"
+        class="duration-200 px-6 py-3 bg-tlgray-800 hover:opacity-80 hover:text-white relative focus:outline-none text-base text-center flex flex-row items-center justify-center gap-2 font-medium">
+        All Posts <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </a>
+</div>
+</div>
+    
+
+  </main><footer class="bg-tlgray-100">
+  
+  <script>
+    function toggleNav() {
+      const hamburger = document.getElementById("hamburgerbtn");
+      const overlay = document.getElementById("overlay");
+      const body = document.body;
+
+      hamburger.addEventListener("click", function () {
+        overlay.classList.toggle("open");
+        hamburger.classList.toggle("is-open");
+        body.classList.toggle("scroll-lock");
+      });
+    }
+    toggleNav();
+
+    document.querySelector('.scroll-top').addEventListener('click', () => {
+      document.documentElement.scrollTop = 0;
+    });
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />
+  
+  <div class="flex items-center justify-between flex-wrap bg-gray-800 p-8 text-white">
+    <div class="items-center text-xl text-grey-900 mr-6">
+      Triad Systems
+    </div>
+    <div class="w-full block grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
+      <div class="text-lg lg:grow">
+      </div>
+      <div class="flex flex-row items-center text-lg">
+        
+        <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
+          
+          Home
+          
+        </a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="copy pl-8 py-5 bg-tlgray-700 text-white text-base">
+    &copy; Triad Systems 2026 All Rights Reserved.
+  </div>
+</footer>
+
+    <script src="/js/splide.min.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            new Splide( '.splide', {
+                type   : 'loop',
+                autoplay: true,
+                interval: 6000,
+                speed: 550,
+            } ).mount();
+        } );
+    </script>
+
 </body>
+
 </html>
