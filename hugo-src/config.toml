@@ -1,13 +1,91 @@
 baseURL = "https://triadsystems.tech/"
 languageCode = "en-us"
 title = "Triad Systems"
+author = "Triad Systems"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
 
 # Build settings for GitHub Pages
 publishDir = "../"
 
-# Disable taxonomies and RSS we don't need
-disableKinds = ["taxonomy", "term", "RSS"]
-
 [params]
-  description = "Empowering innovation through artificial intelligence. AI solutions for the modern enterprise."
-  author = "Triad Systems"
+  showBlog = true
+  mainSections = ['blog']
+  googleFonts = true
+
+  [params.logo]
+    main = "img/logo/logo.svg"
+    alt = "Triad Systems Logo"
+    size = "h-14"
+
+  [params.site]
+    name = "Triad Systems"
+
+  [params.icon]
+    bootstrap = true
+
+  [params.homepage_meta_tags]
+    meta_description = "Empowering innovation through artificial intelligence. AI solutions for the modern enterprise."
+    meta_og_title = "Triad Systems"
+    meta_og_type = "website"
+    meta_og_url = "https://triadsystems.tech/"
+    meta_og_description = "Empowering innovation through artificial intelligence. AI solutions for the modern enterprise."
+    meta_twitter_card = "summary_large_image"
+
+[menu]
+  [[menu.main]]
+    identifier = "solutions"
+    name = "Solutions"
+    url = "/solutions/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
