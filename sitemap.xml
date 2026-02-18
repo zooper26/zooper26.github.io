@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:8080/about/</loc>
+    <loc>https://triadsystems.tech/about/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/solutions/</loc>
+    <loc>https://triadsystems.tech/solutions/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/blog/</loc>
+    <loc>https://triadsystems.tech/blog/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/contact/</loc>
+    <loc>https://triadsystems.tech/contact/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/</loc>
+    <loc>https://triadsystems.tech/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/categories/ai/</loc>
+    <loc>https://triadsystems.tech/categories/ai/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/tags/artificial-intelligence/</loc>
+    <loc>https://triadsystems.tech/tags/artificial-intelligence/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/categories/</loc>
+    <loc>https://triadsystems.tech/categories/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/tags/enterprise/</loc>
+    <loc>https://triadsystems.tech/tags/enterprise/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/tags/</loc>
+    <loc>https://triadsystems.tech/tags/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/categories/technology/</loc>
+    <loc>https://triadsystems.tech/categories/technology/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/blog/ai-trends-2025/</loc>
+    <loc>https://triadsystems.tech/blog/ai-trends-2025/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/tags/trends/</loc>
+    <loc>https://triadsystems.tech/tags/trends/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8080/series/</loc>
+    <loc>https://triadsystems.tech/series/</loc>
   </url>
 </urlset>

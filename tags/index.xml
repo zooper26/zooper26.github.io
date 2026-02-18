@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Triad Systems</title>
-    <link>http://localhost:8080/tags/</link>
+    <link>https://triadsystems.tech/tags/</link>
     <description>Recent content in Tags on Triad Systems</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:8080/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://triadsystems.tech/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Artificial Intelligence</title>
-      <link>http://localhost:8080/tags/artificial-intelligence/</link>
+      <link>https://triadsystems.tech/tags/artificial-intelligence/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/tags/artificial-intelligence/</guid>
+      <guid>https://triadsystems.tech/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Enterprise</title>
-      <link>http://localhost:8080/tags/enterprise/</link>
+      <link>https://triadsystems.tech/tags/enterprise/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/tags/enterprise/</guid>
+      <guid>https://triadsystems.tech/tags/enterprise/</guid>
       <description></description>
     </item>
     <item>
       <title>Trends</title>
-      <link>http://localhost:8080/tags/trends/</link>
+      <link>https://triadsystems.tech/tags/trends/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/tags/trends/</guid>
+      <guid>https://triadsystems.tech/tags/trends/</guid>
       <description></description>
     </item>
   </channel>
