@@ -9,5 +9,5 @@ publishDir = "../"
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "Professional landing page"
+  description = "Empowering innovation through artificial intelligence. AI solutions for the modern enterprise."
   author = "Triad Systems"
