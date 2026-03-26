@@ -3,6 +3,13 @@ hugo
 hugo_extended_*.tar.gz
 LICENSE
 
+# Node modules
+node_modules/
+hugo-src/node_modules/
+
 # Temporary files
 .DS_Store
 Thumbs.db
+
+# Hugo lock file
+.hugo_build.lock

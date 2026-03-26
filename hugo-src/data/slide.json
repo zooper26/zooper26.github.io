@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Empowering Innovation Through Artificial Intelligence",
+    "image": "img/slide/ai-innovation.jpg"
+  },
+  {
+    "title": "Transform Your Business with AI Solutions",
+    "image": "img/slide/ai-business.jpg",
+    "color": "text-white"
+  }
+]

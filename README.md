@@ -1,37 +1,72 @@
 # Triad Systems Website
 
-A modern, secure, and easy-to-update landing page built with Hugo static site generator.
+A modern, professional website built with Hugo static site generator using the Tella theme.
 
 ## 🚀 Features
 
-- ✨ **Easy Editing**: Update content using simple Markdown - no HTML knowledge required!
+- ✨ **Modern Theme**: Built with the Tella Hugo theme for a professional look
+- 📸 **Image Carousel**: Beautiful hero slider with custom AI-themed images
+- 🎨 **Feature Cards**: Showcase services with icon-based feature sections
+- 📝 **Blog**: Built-in blog functionality for sharing insights
 - 🔒 **Secure**: Static site generation eliminates server-side vulnerabilities
-- ⚡ **Fast**: Lightning-fast page loads with optimized static HTML
+- ⚡ **Fast**: Lightning-fast page loads with Tailwind CSS optimization
 - 📱 **Responsive**: Beautiful design that works on all devices
-- 🎨 **Customizable**: Easy to modify both content and design
 
 ## 📝 How to Update Content
 
 ### Quick Edit (Easiest Method)
 
-1. **Edit the main content file**: `hugo-src/content/_index.md`
-   - This file uses Markdown format
-   - Simple syntax like `**bold**`, `*italic*`, `- bullet points`
-   - No HTML knowledge needed!
+1. **Edit content files** in `hugo-src/content/`:
+   - `_index.md` - Homepage content (note: most homepage content is in data files)
+   - `about.md` - About page
+   - `solutions.md` - Solutions page
+   - `contact.md` - Contact page
+   - `blog/*.md` - Blog posts
 
-2. **Rebuild the site**: Run this command from the repository root:
+2. **Update features and slides**:
+   - `hugo-src/data/features.json` - Feature cards on homepage
+   - `hugo-src/data/slide.json` - Hero slider configuration
+
+3. **Rebuild the site**: The GitHub Actions workflow will automatically rebuild when you push changes to `hugo-src/`. Or manually run:
    ```bash
-   ./hugo -s hugo-src
+   hugo -s hugo-src
    ```
 
-3. **Commit and push**:
+4. **Commit and push**:
    ```bash
    git add .
    git commit -m "Updated content"
    git push
    ```
 
-### Markdown Formatting Guide
+## 🎨 Customization
+
+### Update Site Configuration
+
+Edit `hugo-src/config.toml` to change:
+- Site title and description
+- Navigation menu items
+- Theme parameters
+- Social media links
+
+### Add/Change Images
+
+- Logo: `hugo-src/static/img/logo/logo.svg`
+- Slider images: `hugo-src/static/img/slide/`
+- Blog post images: Add to `hugo-src/static/img/blog/`
+
+### Modify Features
+
+Edit `hugo-src/data/features.json` to change the feature cards on the homepage:
+```json
+{
+  "title": "Feature Title",
+  "description": "Feature description",
+  "icon": "bi bi-icon-name"
+}
+```
+
+## Markdown Formatting Guide
 
 Here are some common Markdown formatting examples:
 
@@ -121,8 +156,8 @@ If you need to install Hugo on a new machine:
 
 ### Linux/macOS:
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_Linux-64bit.tar.gz
-tar -xzf hugo_extended_0.121.1_Linux-64bit.tar.gz
+wget https://github.com/gohugoio/hugo/releases/download/v0.145.0/hugo_extended_0.145.0_Linux-64bit.tar.gz
+tar -xzf hugo_extended_0.145.0_Linux-64bit.tar.gz
 chmod +x hugo
 ```
 

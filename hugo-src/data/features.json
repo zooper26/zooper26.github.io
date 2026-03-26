@@ -1,0 +1,32 @@
+[
+  {
+    "title": "AI-Powered Automation",
+    "description": "Streamline your workflows with intelligent automation that learns and adapts to your business needs.",
+    "icon": "bi bi-robot"
+  },
+  {
+    "title": "Advanced Analytics",
+    "description": "Transform raw data into actionable insights with sophisticated analytics and predictive modeling.",
+    "icon": "bi bi-graph-up-arrow"
+  },
+  {
+    "title": "Enterprise Security",
+    "description": "Bank-level security and compliance standards to protect your data and maintain trust.",
+    "icon": "bi bi-shield-check"
+  },
+  {
+    "title": "Machine Learning",
+    "description": "Custom ML models tailored to your specific business needs, from NLP to computer vision.",
+    "icon": "bi bi-cpu"
+  },
+  {
+    "title": "Scalable Infrastructure",
+    "description": "Enterprise-grade AI infrastructure that grows with your business requirements.",
+    "icon": "bi bi-diagram-3"
+  },
+  {
+    "title": "Expert Support",
+    "description": "Industry-leading AI engineers and data scientists working alongside you for success.",
+    "icon": "bi bi-people"
+  }
+]
